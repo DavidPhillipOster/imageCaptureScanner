@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		634E9D432B4A2E0F00F7D3A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 634E9D422B4A2E0F00F7D3A7 /* AppDelegate.m */; };
+		634E9D452B4A2E1000F7D3A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634E9D442B4A2E1000F7D3A7 /* Assets.xcassets */; };
+		634E9D482B4A2E1000F7D3A7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634E9D462B4A2E1000F7D3A7 /* MainMenu.xib */; };
+		634E9D4A2B4A2E1000F7D3A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 634E9D492B4A2E1000F7D3A7 /* main.m */; };
+		634E9D532B4A2E2D00F7D3A7 /* ImageCaptureCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E9D522B4A2E2D00F7D3A7 /* ImageCaptureCore.framework */; };
+		634E9D562B4A2E5300F7D3A7 /* ScannerBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 634E9D552B4A2E5300F7D3A7 /* ScannerBoss.m */; };
+		634E9D582B4A442A00F7D3A7 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634E9D572B4A442A00F7D3A7 /* UniformTypeIdentifiers.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		634E9D3E2B4A2E0F00F7D3A7 /* scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		634E9D412B4A2E0F00F7D3A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		634E9D422B4A2E0F00F7D3A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		634E9D442B4A2E1000F7D3A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		634E9D472B4A2E1000F7D3A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		634E9D492B4A2E1000F7D3A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		634E9D4B2B4A2E1000F7D3A7 /* scanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = scanner.entitlements; sourceTree = "<group>"; };
+		634E9D522B4A2E2D00F7D3A7 /* ImageCaptureCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageCaptureCore.framework; path = System/Library/Frameworks/ImageCaptureCore.framework; sourceTree = SDKROOT; };
+		634E9D542B4A2E5300F7D3A7 /* ScannerBoss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScannerBoss.h; sourceTree = "<group>"; };
+		634E9D552B4A2E5300F7D3A7 /* ScannerBoss.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScannerBoss.m; sourceTree = "<group>"; };
+		634E9D572B4A442A00F7D3A7 /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		634E9D3B2B4A2E0F00F7D3A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634E9D582B4A442A00F7D3A7 /* UniformTypeIdentifiers.framework in Frameworks */,
+				634E9D532B4A2E2D00F7D3A7 /* ImageCaptureCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		634E9D352B4A2E0F00F7D3A7 = {
+			isa = PBXGroup;
+			children = (
+				634E9D402B4A2E0F00F7D3A7 /* scanner */,
+				634E9D3F2B4A2E0F00F7D3A7 /* Products */,
+				634E9D512B4A2E2D00F7D3A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		634E9D3F2B4A2E0F00F7D3A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				634E9D3E2B4A2E0F00F7D3A7 /* scanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		634E9D402B4A2E0F00F7D3A7 /* scanner */ = {
+			isa = PBXGroup;
+			children = (
+				634E9D412B4A2E0F00F7D3A7 /* AppDelegate.h */,
+				634E9D422B4A2E0F00F7D3A7 /* AppDelegate.m */,
+				634E9D542B4A2E5300F7D3A7 /* ScannerBoss.h */,
+				634E9D552B4A2E5300F7D3A7 /* ScannerBoss.m */,
+				634E9D442B4A2E1000F7D3A7 /* Assets.xcassets */,
+				634E9D462B4A2E1000F7D3A7 /* MainMenu.xib */,
+				634E9D492B4A2E1000F7D3A7 /* main.m */,
+				634E9D4B2B4A2E1000F7D3A7 /* scanner.entitlements */,
+			);
+			path = scanner;
+			sourceTree = "<group>";
+		};
+		634E9D512B4A2E2D00F7D3A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				634E9D572B4A442A00F7D3A7 /* UniformTypeIdentifiers.framework */,
+				634E9D522B4A2E2D00F7D3A7 /* ImageCaptureCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		634E9D3D2B4A2E0F00F7D3A7 /* scanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 634E9D4E2B4A2E1000F7D3A7 /* Build configuration list for PBXNativeTarget "scanner" */;
+			buildPhases = (
+				634E9D3A2B4A2E0F00F7D3A7 /* Sources */,
+				634E9D3B2B4A2E0F00F7D3A7 /* Frameworks */,
+				634E9D3C2B4A2E0F00F7D3A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = scanner;
+			productName = scanner;
+			productReference = 634E9D3E2B4A2E0F00F7D3A7 /* scanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		634E9D362B4A2E0F00F7D3A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					634E9D3D2B4A2E0F00F7D3A7 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 634E9D392B4A2E0F00F7D3A7 /* Build configuration list for PBXProject "scanner" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 634E9D352B4A2E0F00F7D3A7;
+			productRefGroup = 634E9D3F2B4A2E0F00F7D3A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				634E9D3D2B4A2E0F00F7D3A7 /* scanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		634E9D3C2B4A2E0F00F7D3A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634E9D452B4A2E1000F7D3A7 /* Assets.xcassets in Resources */,
+				634E9D482B4A2E1000F7D3A7 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		634E9D3A2B4A2E0F00F7D3A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634E9D4A2B4A2E1000F7D3A7 /* main.m in Sources */,
+				634E9D562B4A2E5300F7D3A7 /* ScannerBoss.m in Sources */,
+				634E9D432B4A2E0F00F7D3A7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		634E9D462B4A2E1000F7D3A7 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				634E9D472B4A2E1000F7D3A7 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		634E9D4C2B4A2E1000F7D3A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		634E9D4D2B4A2E1000F7D3A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		634E9D4F2B4A2E1000F7D3A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = scanner/scanner.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.scanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		634E9D502B4A2E1000F7D3A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = scanner/scanner.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.scanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		634E9D392B4A2E0F00F7D3A7 /* Build configuration list for PBXProject "scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				634E9D4C2B4A2E1000F7D3A7 /* Debug */,
+				634E9D4D2B4A2E1000F7D3A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		634E9D4E2B4A2E1000F7D3A7 /* Build configuration list for PBXNativeTarget "scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				634E9D4F2B4A2E1000F7D3A7 /* Debug */,
+				634E9D502B4A2E1000F7D3A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 634E9D362B4A2E0F00F7D3A7 /* Project object */;
+}
