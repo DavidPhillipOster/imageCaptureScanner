@@ -3,13 +3,6 @@
 //
 //  Created by david on 1/6/24.
 
-/*
-browser finds scanner. Sets the dest dir, filename, file type,
-starts the motor in the scanner, but doesn't actually scan.
-
-Compared to the built in app, there's no way to set the scan rectangle, resolution, mode.
- */
-
 #import "ScannerBoss.h"
 
 #import <ImageCaptureCore/ImageCaptureCore.h>
