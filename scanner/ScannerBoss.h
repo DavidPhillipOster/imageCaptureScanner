@@ -1,8 +1,7 @@
-//
 //  ScannerBoss.h
 //  scanner
 //
-//  Created by david on 1/6/24.
+//  Created by David Phillip Oster on 1/6/24.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -14,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)start;
 
 - (void)stop;
+
+- (void)scan;
 
 - (void)requestOverviewScanTo:(NSImageView *)imageView;
 

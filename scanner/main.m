@@ -2,7 +2,7 @@
 //  main.m
 //  scanner
 //
-//  Created by david on 1/6/24.
+//  Created by David Phillip Oster on 1/6/24.
 //
 
 #import <Cocoa/Cocoa.h>

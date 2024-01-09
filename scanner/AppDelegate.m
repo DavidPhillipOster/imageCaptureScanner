@@ -1,7 +1,7 @@
 //  AppDelegate.m
 //  scanner
 //
-//  Created by david on 1/6/24.
+//  Created by David Phillip Oster on 1/6/24.
 //
 
 #import "AppDelegate.h"
@@ -30,9 +30,16 @@
   return YES;
 }
 
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
+  return YES;
+}
+
 - (IBAction)overViewScan:(id)sender {
   [self.scannerBoss requestOverviewScanTo:self.imageView];
 }
 
+- (IBAction)scan:(id)sender {
+  [self.scannerBoss scan];
+}
 
 @end

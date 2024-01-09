@@ -1,7 +1,7 @@
 //  ScannerBoss.m
 //  scanner
 //
-//  Created by david on 1/6/24.
+//  Created by David Phillip Oster on 1/6/24.
 
 #import "ScannerBoss.h"
 
@@ -12,7 +12,7 @@
 @property ICDeviceBrowser *browser;
 @property ICScannerDevice *scanner;
 @property(weak) NSImageView *imageView;
-@property ICScannerFunctionalUnitFlatbed *fu;
+@property(nonatomic) ICScannerFunctionalUnitFlatbed *fu;
 @property(nonatomic) Boolean scannerIsReady;
 @property Boolean overviewScanPending;
 @end
@@ -39,12 +39,23 @@
   [self.browser stop];
 }
 
+- (void)scan {
+  self.fu.measurementUnit = 0;
+  CGFloat resolution = self.fu.resolution * self.fu.scaleFactor / 100.0;
+  self.fu.scanArea = CGRectMake(0, 0, 8*resolution, 10*resolution);
+  [self.scanner requestScan];
+}
+
 - (void)setScannerIsReady:(Boolean)isReady {
   _scannerIsReady = isReady;
   if (isReady && self.overviewScanPending) {
     self.overviewScanPending = NO;
     [self.scanner requestSelectFunctionalUnit:ICScannerFunctionalUnitTypeFlatbed];
   }
+}
+
+- (ICScannerFunctionalUnitFlatbed *)fu {
+  return (ICScannerFunctionalUnitFlatbed *)[self.scanner selectedFunctionalUnit];
 }
 
 - (void)requestOverviewScanTo:(NSImageView *)imageView {
@@ -54,16 +65,18 @@
 
 - (void)requestOverviewScan {
   if (self.scannerIsReady) {
-    NSURL *downloads = [NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
+    NSURL *downloads = [NSFileManager.defaultManager URLsForDirectory:NSDownloadsDirectory inDomains:NSUserDomainMask].firstObject;
     self.scanner.downloadsDirectory = downloads;
     self.scanner.documentUTI = UTTypeTIFF.identifier;
-    self.scanner.documentName = @"Scan1.tiff";
+    self.scanner.documentName = @"Scan1";
     [self.scanner requestOverviewScan];
     NSLog(@"%@", self.scanner);
   } else {
     self.overviewScanPending = YES;
   }
 }
+
+#pragma mark -
 
 - (void)deviceBrowser:(nonnull ICDeviceBrowser *)browser didAddDevice:(nonnull ICDevice *)device moreComing:(BOOL)moreComing {
   if (nil == self.scanner) {
@@ -90,19 +103,6 @@
   NSLog(@"%@", error);
 }
 
-- (void)scannerDevice:(ICScannerDevice*)scanner didSelectFunctionalUnit:(ICScannerFunctionalUnit*)functionalUnit error:(NSError* _Nullable)error {
-  self.fu = (ICScannerFunctionalUnitFlatbed *)functionalUnit;
-  if (self.fu) {
-    NSLog(@"%@", self.fu);
-//TODO: set more parameters of the scan here. Start a timer to update the overview scan CGImage
-    [scanner requestOverviewScan];
-  }
-}
-
-- (void)scannerDevice:(ICScannerDevice*)scanner didScanToBandData:(ICScannerBandData*)data {
-  NSLog(@"%@", scanner);
-}
-
 - (void)deviceDidBecomeReady:(ICDevice*)device {
   if (device == self.scanner) {
     self.scannerIsReady = YES;
@@ -110,6 +110,23 @@
 }
 
 - (void)didRemoveDevice:(ICDevice*)device {
+  if (device == self.scanner) {
+    self.scanner = nil;
+  }
+}
+
+#pragma mark -
+
+- (void)scannerDevice:(ICScannerDevice*)scanner didSelectFunctionalUnit:(ICScannerFunctionalUnit*)functionalUnit error:(NSError* _Nullable)error {
+//  self.fu = (ICScannerFunctionalUnitFlatbed *)functionalUnit;
+// Now a computed property: I ask the scanner each time.
+  if (self.fu) {
+    NSLog(@"%@", self.fu);
+  }
+}
+
+- (void)scannerDevice:(ICScannerDevice*)scanner didScanToBandData:(ICScannerBandData*)data {
+  NSLog(@"%@", scanner);
 }
 
 - (void)device:(ICDevice*)device didOpenSessionWithError:(NSError* _Nullable) error {
@@ -130,6 +147,13 @@
       }
     }
     NSLog(@"%@", scanner);
+  } else {
+    // handle error
+  }
+}
+
+- (void)scannerDevice:(ICScannerDevice*)scanner didCompleteScanWithError:(NSError* _Nullable)error {
+  if (nil == error) {
   } else {
     // handle error
   }
