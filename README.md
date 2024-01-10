@@ -8,7 +8,7 @@ Simple example of controlling a document scanner in macOS without using IKScanne
 
 Change the bundle ID from com.example… to your preferred bundle ID.
 
-Currently, this just does an overview scan.
+Currently, this just does an overview scan or an 8"x10" scan.
 
 ## License
 
